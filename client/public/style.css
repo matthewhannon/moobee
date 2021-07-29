@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    background-color: #434d50;
+    height: 100%;
+}
+
+/* body {
+    height: 100%;
+}
+#root {
+    height: 100%;
+}
+.app {
+    height: 100%;
+} */
+
+.app {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.header {
+    /* width: 100vw; */
+    background-color: #2d3436;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-title-container {
+    margin: 4%;
+}
+
+.header h1 {
+    color: #34ace0;
+    font-family: 'Righteous', cursive;
+    align-self: center;
+    font-size: 64px;
+    line-height: 60px;
+}
+
+.search-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.search-bar label {
+    padding: 2%;
+    color: #d1ccc0;
+}
+
+.search-bar input{
+    background-color: #d1ccc0;
+    height: 50px;
+    width: 400px;
+    outline: none;
+    border: none;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 3px 3px 3px 3px;
+}
+
+.dropdown {
+    width: 400px;
+    min-height: 50px;
+}
+
+.dropdown-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 10;
+}
+
+.dropdown-container a:last-child div {
+    border-radius: 0 0 3px 3px;
+}
+
+.dropdown-container .loading {
+    height: 50px;
+    width: 400px;
+    /* background-color: #636e72; */
+    background-color: #b2bec3;
+    padding: 2%;
+    color: #00b894;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 0px 3px 3px;
+}
+.dropdown-container .no-results {
+    height: 50px;
+    width: 400px;
+    background-color: #ffeaa7;
+    padding: 2%;
+    color: rgb(201, 90, 90);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown-result {
+    height: 100px;
+    width: 400px;
+    background-color: hsla(206, 92%, 100%, 0.89);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+    border: 2px solid rgba(102, 51, 153, 0);
+}
+.dropdown-result:hover {
+    border: 2px solid rebeccapurple;
+}
+
+.dropdown-result-thumbnail {
+    background-color: rebeccapurple;
+    height: 80px;
+}
+
+.dropdown-result-details {
+    padding: 2%;
+    text-align: left;
+}
+
+.trending-page {
+    /* height: 80%; */
+    /* min-height: calc(100% - 250px); */
+    /* background-color: #2c2c54; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 4%;
+}
+.trending-page-title {
+    color: #565692;
+    padding: 2%;
+    text-shadow: 1px 1px 4px #1d2122;
+}
+.trending-films {
+    max-width: 900px;
+    padding-bottom: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.results-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.results-page-list {
+    max-width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.filmcard-container {
+    margin: 1%;
+}
+
+.filmcard {
+    width: 200px;
+    height: 230px;
+    box-shadow: 1px 1px 2px black;
+    background-size: cover;
+    background-position: center;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+}
+.filmcard:hover {
+    transform: scale(1.05);
+    box-shadow: 1px 1px 8px black;
+}
+
+.filmcard-title {
+    color: rgba(255, 218, 121,1.0);
+    font-size: 20px;
+    text-shadow: 2px 1px 2px rgba(44, 44, 84,1.0);
+    padding: 2%;
+}
+.filmcard-character {
+    color: #ffd1be;
+    font-size: 16px;
+    text-shadow: 2px 1px 2px rgba(44, 44, 84,1.0);
+    padding: 2%;
+}
+.filmcard-date {
+    color: #f7f1e3;
+    font-size: 16px;
+    text-shadow: 2px 1px 2px rgba(44, 44, 84,1.0);
+    padding-left: 2%;
+}
+
+.film-details-page {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; */
+}
+
+.film-details {
+    /* background-color: #aaa69d; */
+    min-height: 378px;
+    min-width: 200px;
+    padding: 4%;
+    display: flex;
+    justify-content: center;
+}
+
+.film-details-poster {
+    height: 300px;
+    min-width: 200px;
+    border-radius: 6px;
+}
+
+.film-details-info {
+    margin: 2%;
+    width: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.film-info-title {
+    flex: 0;
+}
+
+.film-info-release-date {
+    flex: 1;
+}
+
+.film-info-tagline {
+    flex: 5;
+}
+.film-info-runtime {
+    flex: 0;
+}
+
+.cast-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cast-page-title {
+    font-size: 30px;
+    padding: 2%;
+}
+
+.cast-list {
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* overflow: hidden; */
+}
+
+.cast-card {
+    background: #2c2c54;
+    box-shadow: 1px 1px 2px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 180px;
+    width: 250px;
+    border-radius: 3px 3px 3px 3px;
+}
+
+.cast-card:hover {
+    transform: scale(1.05);
+    box-shadow: 1px 1px 8px black;
+}
+
+.cast-card-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 100%;
+    padding: 0 1% 0 1%;
+}
+
+.cast-card-name {
+    color: #34ace0;
+    text-shadow: 1px 1px 3px #121225;
+    text-align: center;
+    padding-bottom: 10%;
+    font-size: 20px;
+}
+
+.cast-card-character {
+    color: #84817a;
+    text-align: center;
+    font-size: 14px;
+}
+
+.cast-card-image {
+    width: 120px;
+    border-radius: 0px 3px 3px 0px;
+}
+
+.cast-card-a-container {
+    margin: 1%;
+}
+
+.actor-details-page {
+    height: auto;
+}
+
+.actor-details {
+    min-height: 378px;
+    padding: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.actor-info {
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+}
+
+.actor-image {
+    border-radius: 3px;
+    height: 300px;
+}
+
+.actor-credits-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.actor-credits-page-title {
+    font-size: 30px;
+    padding: 2%;
+}
+
+.actor-credits-list {
+    max-width: 900px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.player-wrapper {
+    display: flex;
+    justify-content: center;
+}
+  
+.react-player {
+    min-height: 300px;
+    padding-bottom: 4%;
+}
+
+/* 
+    anything under 655 width sizes change for filmcards
+*/
+
+@media only screen and (max-width: 870px) {
+    .filmcard {
+        width: 150px;
+        height: 180px;
+        box-shadow: 1px 1px 10px black;
+        background-size: cover;
+        background-position: center;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+    }
+    .cast-card {
+        background: #2c2c54;
+        box-shadow: 1px 1px 2px black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 180px;
+        width: 350px;
+        border-radius: 3px 3px 3px 3px;
+    }
+  }
