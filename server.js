@@ -55,7 +55,7 @@ app.get('/api/actorcredits', async (req, res) => {
     res.json(data);
 })
 
-app.get('/', (req, res) => {
+app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '/client/build/index.html'))
     // console.log(path.join(__dirname, '../moobee/client/build/index.html'));
 })

@@ -73,7 +73,7 @@ const SearchBar = () => {
 
     const formSubmit = (e) => {
         e.preventDefault();
-        history.push(`/api/search/${searchTerm}`);
+        history.push(`/search/${searchTerm}`);
         setSearchTerm('');
     }
 
