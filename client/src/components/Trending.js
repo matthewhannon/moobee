@@ -26,7 +26,8 @@ const Trending = () => {
         const resultsPage = trendingFilms.data.results.map(({id, poster_path, backdrop_path, title, release_date}, i) => {
             return (
                 <Link className="filmcard-container" to={`/details/${id}`} key={id}>
-                    <div className="filmcard" style={{backgroundImage: `linear-gradient(to bottom, rgba(52, 172, 224, .5), rgba(64, 64, 122, .50)), url("https://image.tmdb.org/t/p/w300/${backdrop_path || poster_path}")`}}>
+                    <div className="filmcard" style={{backgroundImage: `linear-gradient(to bottom, rgba(52, 172, 224, .2), rgba(64, 64, 122, .50)), url("https://image.tmdb.org/t/p/w780/${backdrop_path || poster_path}")`}}>
+                    {/* <div className="filmcard" style={{backgroundImage: `url(https://image.tmdb.org/t/p/w780/${backdrop_path || poster_path})`}}> */}
                         <h2 className="filmcard-title">{title}</h2>
                         <p className="filmcard-date">{extractYear(release_date)}</p>
                     </div>

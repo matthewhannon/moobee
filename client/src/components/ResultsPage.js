@@ -35,9 +35,9 @@ const ResultsPage = () => {
         const resultsPage = searchResults.data.map(({ id, poster_path, backdrop_path, title, release_date }, i) => {
             let background;
             if(!poster_path && !backdrop_path) {
-                background = `linear-gradient(to bottom, rgba(52, 172, 224, .5), rgba(64, 64, 122, .50))`;
+                background = `linear-gradient(to bottom, rgba(52, 172, 224, .2), rgba(64, 64, 122, .50))`;
             } else {
-                background = `linear-gradient(to bottom, rgba(52, 172, 224, .5), rgba(64, 64, 122, .50)), url("https://image.tmdb.org/t/p/original/${backdrop_path || poster_path}")`;
+                background = `linear-gradient(to bottom, rgba(52, 172, 224, .2), rgba(64, 64, 122, .50)), url("https://image.tmdb.org/t/p/original/${backdrop_path || poster_path}")`;
             }
                                 // had double character credits show up, so they had duplicate key key={id + 1}
             return (

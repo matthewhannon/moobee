@@ -34,7 +34,7 @@ const ActorDetails = () => {
                             <p>{place_of_birth}</p>
                             {/* <p>{biography}</p> */}
                         </div>
-                        {profile_path && <img className="actor-image" src={`https://image.tmdb.org/t/p/w185/${profile_path}`} alt={`${name}`}></img>}
+                        {profile_path && <img className="actor-image" src={`https://image.tmdb.org/t/p/h632${profile_path}`} alt={`${name}`}></img>}
                     </div>
                     <ActorCredits />
                 </React.Fragment>

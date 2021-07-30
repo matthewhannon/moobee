@@ -31,9 +31,9 @@ const ActorCredits = () => {
         const creditsList = actorCredits.data.cast.map(({ id, poster_path, backdrop_path, title, character, release_date }, i) => {
             let background;
             if(!poster_path && !backdrop_path) {
-                background = `linear-gradient(to bottom, rgba(52, 172, 224, .5), rgba(64, 64, 122, .50))`;
+                background = `linear-gradient(to bottom, rgba(52, 172, 224, .2), rgba(64, 64, 122, .50))`;
             } else {
-                background = `linear-gradient(to bottom, rgba(52, 172, 224, .5), rgba(64, 64, 122, .50)), url("https://image.tmdb.org/t/p/w300/${backdrop_path || poster_path}")`;
+                background = `linear-gradient(to bottom, rgba(52, 172, 224, .2), rgba(64, 64, 122, .50)), url("https://image.tmdb.org/t/p/w780/${backdrop_path || poster_path}")`;
             }
             return (
                 <Link className="filmcard-container" to={`/details/${id}`} key={id}>

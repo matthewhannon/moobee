@@ -10,15 +10,13 @@ const FilmDetails = () => {
         loaded: false,
         data: {}
     });
+    const [videoLoaded, setVideosLoaded] = useState(false);
     const { movie_id } = useParams();
-
-    console.log(movie_id);
 
     useEffect(() => {
         const getDetails = async function() {
             const url = `/api/filmdetails?movie_id=${movie_id}`;
             const data = await fetch(url).then(res => res.json());
-            console.log(data);
             setFilmDetails({
                 loaded: true,
                 data
@@ -41,8 +39,8 @@ const FilmDetails = () => {
                             {runtime > 0 && <p className="film-info-runtime">{runtime + ' minutes'}</p>}
                         </div>
                     </div>
-                    <GetVideos movie_id={id} />
-                    <Cast />
+                    <GetVideos movie_id={id} setVideosLoaded={setVideosLoaded}/>
+                    {videoLoaded && <Cast />}
                 </React.Fragment>
             )
         } else {

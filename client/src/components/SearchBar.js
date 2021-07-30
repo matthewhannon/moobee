@@ -50,11 +50,20 @@ const SearchBar = () => {
                 const getFilms = async () => {
                     const data = await fetch(`/api/searchfilms?film=${searchTerm}`)
                     .then(res => res.json())
-                    setSearchResults({
-                        loaded: true,
-                        results: data.total_results,
-                        data: [...data.results]
-                    });
+                    console.log(data);
+                    if(data.hasOwnProperty('errors')) {
+                        setSearchResults({
+                            loaded: true,
+                            results: data.total_results,
+                            data: []
+                        });
+                    } else {
+                        setSearchResults({
+                            loaded: true,
+                            results: data.total_results,
+                            data: [...data.results]
+                        });
+                    }
                 }
                 if(searchTerm) {
                     getFilms();
@@ -76,6 +85,10 @@ const SearchBar = () => {
         history.push(`/search/${searchTerm}`);
         setSearchTerm('');
     }
+
+    // const typeChecker = (event) => {
+
+    // }
 
     return(
         <div ref={ref} className="search-bar">

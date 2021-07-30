@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ReactPlayer from 'react-player';
 
-const GetVideos = ({ movie_id }) => {
+const GetVideos = ({ movie_id, setVideosLoaded }) => {
     const [videos, setVideos] = useState({
         loaded: false,
         data: {}
@@ -19,14 +19,24 @@ const GetVideos = ({ movie_id }) => {
         getData();
     },[movie_id]);
 
-    
+
+    const renderHelper = () => {
+        if(videos.loaded && videos.data.results.length > 0) {
+            return (
+                <ReactPlayer onReady={() => {setVideosLoaded(true)}}
+                    className='react-player'
+                    url={`https://www.youtube.com/watch?v=${videos.data.results[0].key}`} 
+                />
+            )
+        } else if(videos.loaded) {
+            setVideosLoaded(true);
+            return null;
+        }
+    }
 
     return (
         <div className='player-wrapper'>
-            {(videos.loaded && videos.data.results.length > 0) && <ReactPlayer
-                className='react-player'
-                url={`https://www.youtube.com/watch?v=${videos.data.results[0].key}`}
-            />}
+            {renderHelper()}
       </div>
     )
 }

@@ -23,7 +23,8 @@ const Dropdown = ({ searchResults, searchTerm, showDropdown }) => {
                 if(i <= 4) {
                     return (
                         <Link key={id} to={`/details/${id}`}>
-                            <div className="dropdown-result" style={{backgroundColor: `hsla(206, 92%, ${60 - i * 5}%, 1)`}} key={id}>
+                            <div className="dropdown-result" style={{backgroundColor: `hsl(42, 56%, ${60 - i * 5}%, 1)`}} key={id}>
+                            {/* <div className="dropdown-result" style={{backgroundColor: `hsla(206, 92%, ${60 - i * 5}%, 1)`}} key={id}> */}
                                 <div className="dropdown-result-details">
                                     <h3 className="dropdown-result-title">{title}</h3>
                                     <p>{release_date && release_date.slice(0,4)}</p>
