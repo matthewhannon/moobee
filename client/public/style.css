@@ -451,26 +451,26 @@ a {
     }
 
     .search-bar {
-        width: 100%;
+        width: 90%;
     }
 
     .search-bar form {
-        width: 100%;
+        width: 90%;
     }
 
     .search-bar input {
-        width: 100%;
+        width: 90%;
     }
 
     .dropdown {
-        width: 100%;
+        width: 90%;
     }
 
     .dropdown-container {
-        width: 100%;
+        width: 90%;
     }
 
     .dropdown-result {
-        width: 100%;
+        width: 90%;
     }
 }
