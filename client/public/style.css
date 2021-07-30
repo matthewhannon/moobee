@@ -434,4 +434,43 @@ a {
     .cast-card-image {
         width: 30%;
     }
+
+    .filmcard-container {
+        margin: 2%;
+    }
+
+    .filmcard {
+        width: 150px;
+        height: 180px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .filmcard {
+        width: 300px;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+
+    .search-bar form {
+        width: 100%;
+    }
+
+    .search-bar input {
+        width: 100%;
+    }
+
+    .dropdown {
+        width: 100%;
+    }
+
+    .dropdown-container {
+        width: 100%;
+    }
+
+    .dropdown-result {
+        width: 100%;
+    }
 }
