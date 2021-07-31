@@ -1,8 +1,7 @@
 const express = require("express");
 const path = require('path');
 const fetch = require('node-fetch');
-const KEY2 = require('./API/config');
-const KEY = process.env.API_KEY || KEY2;
+const KEY = process.env.API_KEY;
 const app = express();
 
 
