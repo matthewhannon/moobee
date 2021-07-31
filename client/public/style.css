@@ -408,6 +408,10 @@ a {
 }
 
 @media only screen and (max-width: 480px) {
+    .search-bar {
+        width: 95%;
+    }
+
     .cast-list {
         flex-wrap:nowrap;
         flex-direction: column;
@@ -440,37 +444,29 @@ a {
     }
 
     .filmcard {
-        width: 150px;
+        width: 300px;
         height: 180px;
     }
 }
 
-@media only screen and (max-width: 480px) {
-    .filmcard {
-        width: 300px;
+@media only screen and (max-width: 325px) {
+    .search-bar input{
+        width: 100%;
     }
-
-    .search-bar {
-        width: 90%;
-    }
-
-    .search-bar form {
-        width: 90%;
-    }
-
-    .search-bar input {
-        width: 90%;
-    }
-
     .dropdown {
-        width: 90%;
+        width: 250px;
     }
 
     .dropdown-container {
-        width: 90%;
+        width: 250px;
     }
 
     .dropdown-result {
-        width: 90%;
+        width: 100%;
+    }
+    
+    .dropdown-container .no-results,
+    .dropdown-container .loading {
+        width: 250px;
     }
 }
