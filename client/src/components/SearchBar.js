@@ -86,17 +86,13 @@ const SearchBar = () => {
         setSearchTerm('');
     }
 
-    // const typeChecker = (event) => {
-
-    // }
-
     return(
         <div ref={ref} className="search-bar">
             <form onSubmit={(e) => formSubmit(e)} >
                 <label htmlFor="search">Find a film by title</label>
                 <input
                     onClick={() => setShowDropdown(true)}
-                    style={{borderRadius: `${(showDropdown && searchTerm) ? '3px 3px 0px 0px' : '3px 3px 3px 3px'}`}} 
+                    // style={{borderRadius: `${(showDropdown && searchTerm) ? '3px 3px 0px 0px' : '0px 0px 0px 0px'}`}} 
                     value={searchTerm} onChange={(event) => { setSearchTerm(event.target.value) }}
                     name="search"
                 ></input>

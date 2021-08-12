@@ -5,11 +5,7 @@ import SearchBar from './SearchBar';
 const Header = () => {
     return(
         <div className="header">
-            <div className="header-title-container">
-                <Link to="/">
-                    <h1>moobee</h1>
-                </Link>
-            </div>
+            <h1 className="header-title"><Link to="/">moobee</Link></h1>
             <SearchBar />
         </div>
     )

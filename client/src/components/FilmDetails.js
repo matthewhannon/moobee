@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import extractYear from '../Utils/extractYear';
 import Cast from './Cast';
 import GetVideos from './GetVideos';
+import Overview from './Overview';
 
 
 const FilmDetails = () => {
@@ -26,7 +27,7 @@ const FilmDetails = () => {
     }, [movie_id])
 
     const showDetails = () => {
-        let {title, poster_path, release_date, runtime, tagline, id } = filmDetails.data;
+        let {title, poster_path, release_date, runtime, tagline, id, overview } = filmDetails.data;
         if(filmDetails.loaded) {
             return (
                 <React.Fragment>
@@ -39,7 +40,9 @@ const FilmDetails = () => {
                             {runtime > 0 && <p className="film-info-runtime">{runtime + ' minutes'}</p>}
                         </div>
                     </div>
+                    <p className="overview">{overview}</p>
                     <GetVideos movie_id={id} setVideosLoaded={setVideosLoaded}/>
+                    {/* <Overview overviewText={overview} /> */}
                     {videoLoaded && <Cast />}
                 </React.Fragment>
             )
