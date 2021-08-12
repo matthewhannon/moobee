@@ -3,8 +3,6 @@ import { useParams } from 'react-router-dom';
 import extractYear from '../Utils/extractYear';
 import Cast from './Cast';
 import GetVideos from './GetVideos';
-import Overview from './Overview';
-
 
 const FilmDetails = () => {
     const [filmDetails, setFilmDetails] = useState({
@@ -42,7 +40,6 @@ const FilmDetails = () => {
                     </div>
                     <p className="overview">{overview}</p>
                     <GetVideos movie_id={id} setVideosLoaded={setVideosLoaded}/>
-                    {/* <Overview overviewText={overview} /> */}
                     {videoLoaded && <Cast />}
                 </React.Fragment>
             )
